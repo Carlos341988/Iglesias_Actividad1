@@ -6,20 +6,22 @@ import java.util.List;
 
 public class Incaa {
     
+    //generamos la lista
     private List<Pelicula> peliculas;
 
+    //generamos el constructor pero lo dejamos vacio
     public Incaa() {
         this.peliculas = new ArrayList<>();
     }
-
+    //generamos su get
     public List<Pelicula> getPeliculas() {
         return peliculas;
     }
-
+    //generamos su set
     public void setPeliculas(List<Pelicula> peliculas) {
         this.peliculas = peliculas;
     }
-
+    //generamos un metodo para traer cualquier pelicula por su id
     public Pelicula traerPelicula(int idPelicula){
         Pelicula peli = null;
         int i = 0;
@@ -35,6 +37,7 @@ public class Incaa {
         return peli;
     }
     
+    //generamos un metodo para agregar peliculas y si alguna pelicula ya existe lanza la excepcion 
     public boolean agregarPelicula(String pelicula)throws Exception{
        for(int i =0; i<peliculas.size();i++){
            if(getPeliculas().get(i).getPelicula().equalsIgnoreCase(pelicula)){
